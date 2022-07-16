@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/<user-name>/<repository-name>.git"
+        "url": "git+https://github.com/russo-programmisto/connection.git"
     },
     "author": "Author",
     "license": "",
     "bugs": {
-        "url": "https://github.com/<user-name>/<repository-name>/issues"
+        "url": "https://github.com/russo-programmisto/connection/issues"
     },
-    "homepage": "https://github.com/<user-name>/<repository-name>#readme",
+    "homepage": "https://github.com/russo-programmisto/connection#readme",
     "dependencies": {
         "typescript": "4.1.2",
         "socket.io": "4.4.0",
