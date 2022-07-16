@@ -2,6 +2,7 @@ import { io, Socket } from "socket.io-client";
 import { Request, RequestData } from "../models/request";
 import { isResponse, Response } from "../models/response";
 import { ConnectionEvent } from "../types/event";
+import { v4 as uuidv4, v4 } from "uuid";
 
 export class ConnectionClient {
 
@@ -74,7 +75,7 @@ export class ConnectionClient {
             responseHandler: (response: Response) => void
         }
     ) => {
-        const requestIdentifier = `${Date.now()}`;
+        const requestIdentifier = `${v4()}-${Date.now()}`;
         const request: Request = {
             id: requestIdentifier,
             ...configuration.data

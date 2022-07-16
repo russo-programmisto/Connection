@@ -13,6 +13,7 @@ exports.ConnectionClient = void 0;
 const socket_io_client_1 = require("socket.io-client");
 const response_1 = require("../models/response");
 const event_1 = require("../types/event");
+const uuid_1 = require("uuid");
 class ConnectionClient {
     constructor(configuration) {
         this.configuration = configuration;
@@ -32,7 +33,7 @@ class ConnectionClient {
             });
         });
         this.sendRequestWithCallback = (configuration) => {
-            const requestIdentifier = `${Date.now()}`;
+            const requestIdentifier = `${uuid_1.v4()}-${Date.now()}`;
             const request = Object.assign({ id: requestIdentifier }, configuration.data);
             this.requests.push({
                 id: requestIdentifier,
