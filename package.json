@@ -1,6 +1,6 @@
 {
     "name": "@russo-programmisto/connection",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "REST API over Socket Connection",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
